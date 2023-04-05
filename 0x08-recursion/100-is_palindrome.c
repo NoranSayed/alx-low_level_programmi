@@ -2,51 +2,51 @@
 
 /**
  * last_index - returns the last index of a string (counts the null char)
- * @s: pointer the string
+ * @l: pointer the string
  * Return: int
  */
 
-int last_index(char *s)
+int last_index(char *l)
 {
-	int n = 0;
+	int m = 0;
 
-	if (*s > '\0')
-		n += last_index(s + 1) + 1;
+	if (*l > '\0')
+		m += last_index(l + 1) + 1;
 
-	return (n);
+	return (m);
 }
 
 /**
  * is_palindrome - check if a string is a palindrome
- * @s: string to check
+ * @l: string to check
  * Return: 0 or 1
  */
 
-int is_palindrome(char *s)
+int is_palindrome(char *l)
 {
-	int end = last_index(s);
+	int end = last_index(l);
 
-	return (check(s, 0, end - 1, end % 2));
+	return (check(l, 0, end - 1, end % 2));
 }
 
 /**
  * check - checker for the palindrome
- * @s: string
+ * @l: string
  * @start: int moves from right to left
  * @end: int moves from left to right
- * @pair: int
+ * @p: int
  * Return: 0 or 1
  */
 
 
-int check(char *s, int start, int end, int pair)
+int check(char *l, int start, int end, int p)
 {
 
-	if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
+	if ((start == end && p != 0) || (start == end + 1 && p == 0))
 		return (1);
-	else if (s[start] != s[end])
+	else if (l[start] != l[end])
 		return (0);
 	else
-		return (check(s, start + 1, end - 1, pair));
+		return (check(l, start + 1, end - 1, pair));
 }
 
