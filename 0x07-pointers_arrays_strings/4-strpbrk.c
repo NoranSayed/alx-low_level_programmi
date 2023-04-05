@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * _str - bytes
+ * _strpbrk - bytes
  * @n: pointer to char
  * @acc: pointer to char
  * Return: NULL
  */
 
-char *_str(char *n, char *acc)
+char *_strpbrk(char *n, char *acc)
 {
 	int j;
 
