@@ -2,26 +2,26 @@
 #include <stdio.h>
 
 /**
- * _strpbrk - bytes
- * @s: pointer to char
- * @accept: pointer to char
+ * _str - bytes
+ * @n: pointer to char
+ * @acc: pointer to char
  * Return: NULL
  */
 
-char *_strpbrk(char *s, char *accept)
+char *_str(char *n, char *acc)
 {
-	int i;
+	int j;
 
-	while (*s)
+	while (*n)
 	{
-		for (i = 0; accept[i]; i++)
+		for (j = 0; acc[j]; j++)
 		{
-			if (*s == accept[i])
+			if (*n == acc[j])
 			{
-				return (s);
+				return (n);
 			}
 		}
-		s++;
+		n++;
 	}
 	return (NULL);
 }
