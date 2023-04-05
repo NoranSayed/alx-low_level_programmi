@@ -2,31 +2,31 @@
 
 /**
 * _strstr - function locate
-* @haystack: pointer to char
-* @needle: pointer to char
+* @hays: pointer to char
+* @need: pointer to char
 * Return: 0
 */
 
-char *_strstr(char *haystack, char *needle)
+char *_strstr(char *hays, char *need)
 {
-	char *result = haystack, *fneedle = needle;
+	char *res = hays, *fneed = need;
 
-	while (*haystack)
+	while (*hays)
 	{
-		while (*needle)
+		while (*need)
 		{
-			if (*haystack++ != *needle++)
+			if (*hays++ != *need++)
 			{
 				break;
 			}
 		}
-		if (!*needle)
+		if (!*need)
 		{
-			return (result);
+			return (res);
 		}
-		needle = fneedle;
-		result++;
-		haystack = result;
+		need = fneed;
+		res++;
+		hays = res;
 	}
 	return (0);
 }
