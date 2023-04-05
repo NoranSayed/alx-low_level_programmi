@@ -2,20 +2,20 @@
 
 /**
  * _memcpy - irontnoux2
- * @dest: pointer to char params
- * @src: pointer to char params
- * @n: size
- * Return: *dest
+ * @d: pointer to char params
+ * @s: pointer to char params
+ * @m: size
+ * Return: *d
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *d, char *s, unsigned int m)
 {
 	unsigned int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < m; i++)
 	{
-		dest[i] = src[i];
+		d[i] = s[i];
 	}
-	return (dest);
+	return (d);
 }
 
