@@ -2,16 +2,16 @@
 
 /**
  * _print_rev_recursion - prints string in reverse
- * @s: pointer to the string
+ * @m: pointer to the string
  * Return: void
  */
 
-void _print_rev_recursion(char *s)
+void _print_rev_recursion(char *m)
 {
-	if (*s > '\0')
+	if (*m > '\0')
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+		_print_rev_recursion(m + 1);
+		_putchar(*m);
 	}
 
 }
