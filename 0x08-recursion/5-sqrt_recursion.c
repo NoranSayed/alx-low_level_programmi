@@ -2,29 +2,29 @@
 
 /**
  * _sqrt_recursion - find natural square root
- * @n: int
+ * @s: int
  * Return: int
  */
 
-int _sqrt_recursion(int n)
+int _sqrt_recursion(int s)
 {
-	return (square(n, 1));
+	return (square(s, 1));
 }
 
 /**
  * square - find square root
- * @n: int to find square root
+ * @s: int to find square root
  * @val: square root
  * Return: int
  */
 
-int square(int n, int val)
+int square(int s, int v)
 {
 
-	if (val * val == n)
-		return (val);
-	else if (val * val < n)
-		return  (square(n, val + 1));
+	if (v * v == s)
+		return (v);
+	else if (v * v < s)
+		return  (square(s, v + 1));
 	else
 		return (-1);
 
