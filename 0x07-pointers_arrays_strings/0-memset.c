@@ -2,20 +2,20 @@
 
 /**
  * _memset - ironnou
- * @s: pointer to char params
- * @b: data to change
- * @n: index
- * Return: *s
+ * @m: pointer to char params
+ * @n: data to change
+ * @num: index
+ * Return: *m
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memset(char *m, char n, unsigned int num)
 {
 	unsigned int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < num; i++)
 	{
-		s[i] = b;
+		m[i] = num;
 	}
-	return (s);
+	return (m);
 }
 
