@@ -2,23 +2,23 @@
 
 /**
  * _pow_recursion - Search a string for any of a set of bytes.
- * @x: base
- * @y: exposant
+ * @m: base
+ * @n: exposant
  * Return: Pointer to the byte in `s` that matches one of the bytes in `accept`
  * or NULL if no such byte is found.
  */
 
-int _pow_recursion(int x, int y)
+int _pow_recursion(int m, int n)
 {
 
-	if (y < 0)
+	if (n < 0)
 		return (-1);
-	else if (y == 1)
-		return (x);
-	else if (y == 0)
+	else if (n == 1)
+		return (m);
+	else if (n == 0)
 		return (1);
 
-	return (x * _pow_recursion(x, y - 1));
+	return (m * _pow_recursion(m, n - 1));
 
 }
 
