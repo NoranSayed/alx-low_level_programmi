@@ -2,23 +2,23 @@
 
 /**
  * factorial - finds factorial
- * @n: int
+ * @f: int
  * Return: int
  */
 
-int factorial(int n)
+int factorial(int f)
 {
 
-	if (n < 0)
+	if (f < 0)
 	{
 		return (-1);
 	}
-	else if (n == 0)
+	else if (f == 0)
 	{
 		return (1);
 	}
 
-	return (n * factorial(n - 1));
+	return (f * factorial(f - 1));
 
 }
 
