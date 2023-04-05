@@ -34,15 +34,15 @@ int is_palindrome(char *l)
  * @l: string
  * @start: int moves from right to left
  * @end: int moves from left to right
- * @p: int
+ * @pair: int
  * Return: 0 or 1
  */
 
 
-int check(char *l, int start, int end, int p)
+int check(char *l, int start, int end, int pair)
 {
 
-	if ((start == end && p != 0) || (start == end + 1 && p == 0))
+	if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
 		return (1);
 	else if (l[start] != l[end])
 		return (0);
