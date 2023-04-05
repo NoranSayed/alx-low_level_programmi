@@ -2,29 +2,29 @@
 
 /**
  * wildcmp - Compare strings
- * @s1: pointer to string params
- * @s2: pointer to string params
+ * @w1: pointer to string params
+ * @w2: pointer to string params
  * Return: 0
  */
 
-int wildcmp(char *s1, char *s2)
+int wildcmp(char *w1, char *w2)
 {
-	if (*s1 == '\0')
+	if (*w1 == '\0')
 	{
-		if (*s2 != '\0' && *s2 == '*')
+		if (*w2 != '\0' && *w2 == '*')
 		{
-			return (wildcmp(s1, s2 + 1));
+			return (wildcmp(w1, w2 + 1));
 		}
-		return (*s2 == '\0');
+		return (*w2 == '\0');
 	}
 
-	if (*s2 == '*')
+	if (*w2 == '*')
 	{
-		return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
+		return (wildcmp(w1 + 1, w2) || wildcmp(w1, w2 + 1));
 	}
-	else if (*s1 == *s2)
+	else if (*w1 == *w2)
 	{
-		return (wildcmp(s1 + 1, s2 + 1));
+		return (wildcmp(w1 + 1, w2 + 1));
 	}
 	return (0);
 }
