@@ -2,24 +2,24 @@
 
 /**
  * _strchr - prints found c
- * @s: pointer to char
+ * @n: pointer to char
  * @c: char params to found
  * Return: *S
 */
 
-char *_strchr(char *s, char c)
+char *_strchr(char *n, char charr)
 {
-	while (*s != '\0')
+	while (*n != '\0')
 	{
-		if (*s == c)
+		if (*n == charr)
 		{
-			return (s);
+			return (charr);
 		}
-		s++;
+		n++;
 	}
-	if (*s == c)
+	if (*n == charr)
 	{
-		return (s);
+		return (n);
 	}
 return (0);
 }
