@@ -3,7 +3,7 @@
 /**
  * _strchr - prints found charr
  * @n: pointer to char
- * @c: char params to found
+ * @charr: char params to found
  * Return: *S
 */
 
