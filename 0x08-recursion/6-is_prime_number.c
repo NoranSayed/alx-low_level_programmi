@@ -2,31 +2,31 @@
 #include <stdio.h>
 /**
  * is_prime_number - check if n is a prime number
- * @n: int
+ * @num: int
  * Return: 0 or 1
  */
 
 
-int is_prime_number(int n)
+int is_prime_number(int num)
 {
-	return (check_prime(n, 2));
+	return (check_prime(num, 2));
 }
 
 /**
- * check_prime - check all number < n if they can divide it
- * @n: int
- * @resp: int
+ * check_prime - check all number < num if they can divide it
+ * @num: int
+ * @r: int
  * Return: int
  */
 
-int check_prime(int n, int resp)
+int check_prime(int num, int r)
 {
 
-	if (resp >= n && n > 1)
+	if (r >= num && num > 1)
 		return (1);
-	else if (n % resp == 0 || n <= 1)
+	else if (num % r == 0 || num <= 1)
 		return (0);
 	else
-		return (check_prime(n, resp + 1));
+		return (check_prime(num, r + 1));
 }
 
