@@ -2,28 +2,28 @@
 
 /**
 * _strspn - Gets the length of a prefix substring.
-* @s: String where substring will look.
-* @accept: Substring of accepted chars.
+* @n: String where substring will look.
+* @acc: Substring of accepted chars.
 * Return: Length of occurrence.
 */
 
-unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(char *n, char *acc)
 {
-	unsigned int c = 0;
-	char *t = accept;
+	unsigned int m = 0;
+	char *f = acc;
 
-	while (*s++)
+	while (*n++)
 	{
-		while (*accept++)
-			if (*(s - 1) == *(accept - 1))
+		while (*acc++)
+			if (*(n - 1) == *(acc - 1))
 			{
-				c++;
+				m++;
 				break;
 			}
-		if (!(*--accept))
+		if (!(*--acc))
 			break;
-		accept = t;
+		acc = f;
 	}
-	return (c);
+	return (m);
 }
 
