@@ -1,11 +1,11 @@
 #include "main.h"
 /**
  * set_string - sets pointer val to char
- * @s: pointer
- * @to: char
+ * @si: pointer
+ * @t: char
  */
-void set_string(char **s, char *to)
+void set_string(char **si, char *t)
 {
-	*s = to;
+	*si = t;
 }
 
