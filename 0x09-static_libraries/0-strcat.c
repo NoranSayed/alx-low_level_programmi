@@ -7,7 +7,7 @@
  * Return: return value of dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *d, char *s)
 {
 	int i;
 	int j;
@@ -15,19 +15,18 @@ char *_strcat(char *dest, char *src)
 	i = 0;
 	j = 0;
 
-	while (dest[i] != '\0')
+	while (d[i] != '\0')
 	{
 		i++;
 	}
 
-	while (src[j] != '\0')
+	while (s[j] != '\0')
 	{
-		dest[i] = src[j];
+		d[i] = s[j];
 		j++;
 		i++;
 	}
 
-	dest[i] = '\0';
-	return (dest);
+	d[i] = '\0';
+	return (d);
 }
-
