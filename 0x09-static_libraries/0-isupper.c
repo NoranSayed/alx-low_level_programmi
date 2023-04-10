@@ -9,9 +9,8 @@
  */
 
 
-int _isupper(int c)
+int _isupper(int x)
 {
 
-	return (c >= 65 && c <= 90);
+	return (x >= 65 && x <= 90);
 }
-
